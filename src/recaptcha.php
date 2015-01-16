@@ -23,7 +23,7 @@ class recaptcha
 		return '<div class="g-recaptcha" data-sitekey="'.self::$site_key.'"></div>';
 	}
 
-	public static function isValid($code = null, $ip = null)
+	public static function check($code = null, $ip = null)
 	{
 		$code = $_POST['g-recaptcha-response'];
 	    if (empty($code)) {
