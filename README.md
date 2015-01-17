@@ -7,7 +7,7 @@ Installation
 -------
 With composer :
 ```json
-"zoneroot/recaptcha": "master"
+"zoneroot/recaptcha": "dev-master"
 ```
 
 
