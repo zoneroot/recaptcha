@@ -1,6 +1,9 @@
 {
     "name": "zoneroot/recaptcha",
+    "type": "library",
     "description": "Simple recaptcha class",
+    "keywords": ["recaptcha","captcha"],
+    "homepage": "http://zoneroot.github.io/recaptcha/",
     "license": "GNU GPL 2.0",
     "authors": [
         {
