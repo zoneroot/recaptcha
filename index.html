@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Recaptcha by zoneroot</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Recaptcha</h1>
+          <h2>Simple recaptcha static php class</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/zoneroot/recaptcha/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/zoneroot/recaptcha/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/zoneroot/recaptcha" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="recaptcha" class="anchor" href="#recaptcha" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recaptcha</h1>
+
+<p>Simple recaptcha static php class.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>With composer :</p>
+
+<div class="highlight highlight-json"><pre><span class="pl-s1"><span class="pl-pds">"</span>zoneroot/recaptcha<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">"</span>master<span class="pl-pds">"</span></span></pre></div>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>First you need to init the recaptcha with your keys :</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">use</span> <span class="pl-s3">\zoneroot\recaptcha\recaptcha</span>;</span>
+<span class="pl-s2"><span class="pl-s3">recaptcha</span><span class="pl-k">::</span>init(<span class="pl-s1"><span class="pl-pds">"</span>public key<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>private key<span class="pl-pds">"</span></span>);</span></pre></div>
+
+<p>Then in your head tag insert :</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-s3">recaptcha</span><span class="pl-k">::</span>script()</span></pre></div>
+
+<p>Next in your form tag insert :</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-s3">recaptcha</span><span class="pl-k">::</span>html()</span></pre></div>
+
+<p>Finally you must check if the captcha is valid :</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">try</span> {</span>
+<span class="pl-s2">    <span class="pl-s3">recaptcha</span><span class="pl-k">::</span>check()</span>
+<span class="pl-s2">    <span class="pl-s3">echo</span> <span class="pl-s1"><span class="pl-pds">"</span>Captcha is valid<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s2">} </span>
+<span class="pl-s2"><span class="pl-k">catch</span> (<span class="pl-s3">\zoneroot\recaptcha\exceptions\</span><span class="pl-s3">invalidRecaptchaException</span> <span class="pl-vo">$e</span>) {</span>
+<span class="pl-s2">    <span class="pl-s3">echo</span> <span class="pl-vo">$e</span><span class="pl-k">-&gt;</span>getMessage();</span>
+<span class="pl-s2">}</span>
+<span class="pl-s2"><span class="pl-k">catch</span> (<span class="pl-s3">\zoneroot\recaptcha\exceptions\</span><span class="pl-s3">connectionException</span> <span class="pl-vo">$e</span>) {</span>
+<span class="pl-s2">    <span class="pl-s3">echo</span> <span class="pl-vo">$e</span><span class="pl-k">-&gt;</span>getMessage();</span>
+<span class="pl-s2">}</span></pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>For contributing just follow the code style.</p>
+
+<h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Todo</h2>
+
+<blockquote>
+<p>Add some comment</p>
+</blockquote>
+
+<h4>
+<a id="inspired-by-grafikart" class="anchor" href="#inspired-by-grafikart" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inspired by <a href="http://www.grafikart.fr/tutoriels/php/recaptcha-anti-spam-346">grafikart</a>
+</h4>
+        </section>
+
+        <footer>
+          Recaptcha is maintained by <a href="https://github.com/zoneroot">zoneroot</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
