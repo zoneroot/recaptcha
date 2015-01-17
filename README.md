@@ -6,7 +6,7 @@ Simple recaptcha static php class.
 Installation
 -------
 With composer :
-```
+```json
 "zoneroot/recaptcha": "master"
 ```
 
@@ -20,11 +20,11 @@ recaptcha::init("public key", "private key");
 ```
 Then in your head tag insert :
 ```php
-<?php echo recaptcha::script() ?>
+echo recaptcha::script()
 ```
 Next in your form tag insert :
 ```php
-<?php echo recaptcha::html() ?>
+echo recaptcha::html()
 ```
 Finally you must check if the captcha is valid :
 ```php
