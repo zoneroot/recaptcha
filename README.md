@@ -1,7 +1,7 @@
 Recaptcha
 ====
 Simple recaptcha static php class.
-****
+
 
 Installation
 -------
@@ -9,7 +9,7 @@ With composer :
 ```
 "zoneroot/recaptcha": "master"
 ```
-****
+
 
 Usage
 ==
@@ -39,17 +39,17 @@ catch (\zoneroot\recaptcha\exceptions\connectionException $e) {
 	echo $e->getMessage();
 }
 ```
-****
+
 
 Contributing
 --------
 For contributing just follow the code style.
-****
+
 
 Todo
 ---
 >Add some comment
 
-****
+
 
 ####Inspired by [grafikart](http://www.grafikart.fr/tutoriels/php/recaptcha-anti-spam-346)
